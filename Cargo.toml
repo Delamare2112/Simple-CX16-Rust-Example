@@ -22,3 +22,6 @@ ufmt-write = {git="https://github.com/mrk-its/ufmt", branch="ptr_width_16_fix"}
 
 [dependencies]
 ufmt-stdio = "0"
+
+[build-dependencies]
+bindgen = "0.65.1"

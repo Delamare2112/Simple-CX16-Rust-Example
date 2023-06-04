@@ -2,8 +2,11 @@
 #![feature(start)]
 #![allow(stable_features)]
 #![feature(default_alloc_error_handler)]
+#![feature(naked_functions)]
 #![allow(unused_imports)]
 #![feature(lang_items)]
+
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 use core::panic::PanicInfo;
 use ufmt_stdio::*;
@@ -21,6 +24,10 @@ fn panic(_info: &PanicInfo) -> ! {
 #[start]
 fn _main(_argc: isize, _argv: *const *const u8) -> isize {
     println!("Hello {}!", 6502);
+    unsafe {
+        cx16_k_screen_mode_set(128);
+    }
+    println!("HELLO FROM A NEW MODE!");
     0
 }
 
