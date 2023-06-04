@@ -1,9 +1,10 @@
 [package]
 name = "rust-mos-test"
+authors = ["Trevor Berninger <baladashman@protonmail.com>"]
+license = "MIT"
+repository = "https://gitlab.com/Delamare/simple-cx16-rust-example"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [profile.dev]
 lto = true
