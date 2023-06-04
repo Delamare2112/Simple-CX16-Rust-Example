@@ -1,4 +1,5 @@
 fn main() {
+    // FIXME: clone or submodule the forked sdk, build it, then grab these files (and patch the .h)
     println!("cargo:rustc-link-arg=/home/mos/local/extern/libc.a");
     println!("cargo:rerun-if-changed=/home/mos/local/extern/cx16.h");
     let bindings = bindgen::Builder::default()
